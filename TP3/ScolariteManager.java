@@ -2,18 +2,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ScolariteManager implements Observer {
-    private static ScolariteManager instance; [cite: 189]
+    private static ScolariteManager instance; 
     private List<Etudiant> etudiants = new ArrayList<>();
 
-    private ScolariteManager() {} [cite: 190]
+    private ScolariteManager() {} 
 
     public static synchronized ScolariteManager getInstance() {
-        if (instance == null) instance = new ScolariteManager(); [cite: 190]
+        if (instance == null) instance = new ScolariteManager(); 
         return instance;
     }
 
     @Override
     public void update(String msg) {
-        System.out.println("[NOTIF] Manager informe: " + msg); [cite: 199]
+        System.out.println("[NOTIF] Manager informe: " + msg); 
     }
 }
