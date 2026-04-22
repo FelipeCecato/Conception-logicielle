@@ -3,11 +3,11 @@ public class EtudiantDelegue extends Etudiant {
 
     public EtudiantDelegue(Etudiant e) {
         super(e.getNom(), e.getAge(), e.getNumEtudiant(), e.getMoyenne());
-        this.base = e; [cite: 193]
+        this.base = e; 
     }
 
     @Override
     public String afficherDetails() {
-        return base.afficherDetails() + " [ROLE: DELEGUE]"; [cite: 193]
+        return base.afficherDetails() + " [ROLE: DELEGUE]"; 
     }
 }
