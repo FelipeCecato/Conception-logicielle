@@ -1,7 +1,7 @@
 public class LegacyAdapter {
     public static Cours adapt(String legacyFormat) {
         // legacyFormat: "Nom;Prof" [cite: 194]
-        String[] parts = legacyFormat.split(";"); [cite: 195]
-        return new Cours(parts[0], parts[1]); [cite: 195]
+        String[] parts = legacyFormat.split(";"); 
+        return new Cours(parts[0], parts[1]); 
     }
 }
