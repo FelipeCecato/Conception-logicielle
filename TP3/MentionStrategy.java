@@ -1,5 +1,5 @@
 public interface MentionStrategy {
-    String calculer(double moyenne); [cite: 197]
+    String calculer(double moyenne); 
 }
 
 public class MentionExcel extends MentionStrategy {
