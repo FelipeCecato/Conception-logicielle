@@ -23,6 +23,11 @@ class Personne(ABC):
     def afficher_details(self):
         pass
 
+class Cours:
+    def __init__(self, nom_cours: str, professeur: str):
+        self.nom_cours = nom_cours
+        self.professeur = professeur
+
 class Etudiant(Personne):
     def __init__(self, nom, age, num_etudiant, moyenne):
         super().__init__(nom, age)
