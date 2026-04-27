@@ -1,0 +1,36 @@
+@startuml
+abstract class Personne {
+    # nom: String
+    # age: int
+}
+
+class Etudiant {
+    - numEtudiant: String
+    - moyenne: double
+    - listeCours: List<Cours>
+    + getDetails(): String
+}
+
+class Cours {
+    - nomCours: String
+    - professeur: String
+}
+
+interface IReportGenerator {
+    + generate(Etudiant e): void
+}
+
+class ConsoleReport {
+    + generate(Etudiant e): void
+}
+
+class JsonReport {
+    + generate(Etudiant e): void
+}
+
+Personne <|-- Etudiant
+Etudiant "1" o-- "0..*" Cours : contient
+IReportGenerator <|.. ConsoleReport
+IReportGenerator <|.. JsonReport
+Main ..> IReportGenerator : utilise
+@enduml
