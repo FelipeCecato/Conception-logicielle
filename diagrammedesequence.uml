@@ -1,0 +1,14 @@
+@startuml
+actor Main
+participant "alice:Etudiant" as E
+participant "maths:Cours" as C
+participant "reportService:IReportGenerator" as R
+
+Main -> E : create("Alice", 20, "ETU01")
+Main -> C : create("Maths", "Dr. Turing")
+Main -> E : ajouterCours(maths)
+Main -> R : generate(alice)
+R -> E : getDetails()
+E --> R : "Données Etudiant"
+R -> R : formaterDonnées()
+@enduml
